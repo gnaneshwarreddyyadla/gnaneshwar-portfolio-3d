@@ -2,7 +2,7 @@
 
 Personal portfolio website built with **Next.js 14**, **React Three Fiber**, **Tailwind CSS**, and **Framer Motion**.
 
-🔗 **Live:** [gnaneshwar-portfolio-theta.vercel.app](https://gnaneshwar-portfolio-theta.vercel.app)
+🔗 **Live:** https://gnaneshwar-portfolio-3d.vercel.app/
 
 ---
 
