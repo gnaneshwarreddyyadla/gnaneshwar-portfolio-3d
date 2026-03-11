@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <!-- Background glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#1a0a3e" />
+      <stop offset="60%" stop-color="#0d0521" />
+      <stop offset="100%" stop-color="#050210" />
+    </radialGradient>
+
+    <!-- Skin gradient -->
+    <linearGradient id="skinGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c68642" />
+      <stop offset="100%" stop-color="#8d5524" />
+    </linearGradient>
+
+    <!-- Cyborg metal -->
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a3a5c" />
+      <stop offset="40%" stop-color="#5a5a8c" />
+      <stop offset="60%" stop-color="#4a4a7c" />
+      <stop offset="100%" stop-color="#2a2a4c" />
+    </linearGradient>
+
+    <!-- Cyborg glow -->
+    <linearGradient id="cyberGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+
+    <!-- Eye glow -->
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="60%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </radialGradient>
+
+    <!-- Right eye (cyborg) -->
+    <radialGradient id="cyberEyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </radialGradient>
+
+    <!-- Hair gradient -->
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="100%" stop-color="#0f0f1a" />
+    </linearGradient>
+
+    <!-- Hoodie gradient -->
+    <linearGradient id="hoodieGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1e3a" />
+      <stop offset="100%" stop-color="#0f0f20" />
+    </linearGradient>
+
+    <!-- Circuit line glow filter -->
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Drop shadow for depth -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Ear piece gradient -->
+    <linearGradient id="earPieceGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a4a7c" />
+      <stop offset="100%" stop-color="#2a2a4c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="900" fill="url(#bgGlow)" />
+
+  <!-- Background circuit lines -->
+  <g opacity="0.12" stroke="#7c3aed" stroke-width="1" fill="none">
+    <line x1="100" y1="0" x2="100" y2="900" />
+    <line x1="200" y1="0" x2="200" y2="900" />
+    <line x1="300" y1="0" x2="300" y2="900" />
+    <line x1="500" y1="0" x2="500" y2="900" />
+    <line x1="600" y1="0" x2="600" y2="900" />
+    <line x1="700" y1="0" x2="700" y2="900" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+    <line x1="0" y1="600" x2="800" y2="600" />
+    <line x1="0" y1="750" x2="800" y2="750" />
+    <!-- Circuit dots -->
+    <circle cx="100" cy="150" r="4" fill="#7c3aed" />
+    <circle cx="200" cy="300" r="4" fill="#7c3aed" />
+    <circle cx="300" cy="450" r="4" fill="#7c3aed" />
+    <circle cx="500" cy="300" r="4" fill="#7c3aed" />
+    <circle cx="600" cy="600" r="4" fill="#7c3aed" />
+    <circle cx="700" cy="150" r="4" fill="#7c3aed" />
+  </g>
+
+  <!-- Floating data particles -->
+  <g opacity="0.3">
+    <circle cx="120" cy="200" r="2" fill="#a855f7">
+      <animate attributeName="cy" values="200;180;200" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="680" cy="300" r="2.5" fill="#22d3ee">
+      <animate attributeName="cy" values="300;275;300" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="500" r="1.5" fill="#a855f7">
+      <animate attributeName="cy" values="500;480;500" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="710" cy="450" r="2" fill="#22d3ee">
+      <animate attributeName="cy" values="450;430;450" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="150" cy="700" r="1.8" fill="#7c3aed">
+      <animate attributeName="cy" values="700;685;700" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="650" cy="650" r="2.2" fill="#a855f7">
+      <animate attributeName="cy" values="650;630;650" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- === CHARACTER === -->
+  <g filter="url(#shadow)">
+
+    <!-- BODY / HOODIE -->
+    <g>
+      <!-- Shoulders and torso -->
+      <path d="M 280 620 Q 280 580 320 560 L 400 540 L 480 560 Q 520 580 520 620 L 530 900 L 270 900 Z"
+            fill="url(#hoodieGrad)" />
+
+      <!-- Hoodie collar -->
+      <path d="M 340 570 Q 400 600 460 570 Q 450 590 400 610 Q 350 590 340 570"
+            fill="#252545" />
+
+      <!-- Hoodie center line -->
+      <line x1="400" y1="610" x2="400" y2="900" stroke="#252545" stroke-width="2" />
+
+      <!-- Hoodie pocket -->
+      <path d="M 340 750 L 460 750 L 455 780 Q 400 790 345 780 Z"
+            fill="none" stroke="#252545" stroke-width="1.5" />
+
+      <!-- Zipper pulls -->
+      <circle cx="400" cy="620" r="3" fill="#5a5a8c" />
+      <circle cx="400" cy="640" r="2" fill="#4a4a7c" />
+
+      <!-- Cyber lines on hoodie -->
+      <g filter="url(#glowFilter)" opacity="0.6">
+        <line x1="310" y1="620" x2="310" y2="750" stroke="#7c3aed" stroke-width="1.5" />
+        <line x1="310" y1="680" x2="340" y2="680" stroke="#7c3aed" stroke-width="1.5" />
+        <circle cx="340" cy="680" r="3" fill="#a855f7" />
+
+        <line x1="490" y1="620" x2="490" y2="750" stroke="#22d3ee" stroke-width="1.5" />
+        <line x1="490" y1="700" x2="460" y2="700" stroke="#22d3ee" stroke-width="1.5" />
+        <circle cx="460" cy="700" r="3" fill="#22d3ee" />
+      </g>
+    </g>
+
+    <!-- NECK -->
+    <rect x="370" y="520" width="60" height="50" rx="5" fill="url(#skinGrad)" />
+
+    <!-- Neck cyber implant -->
+    <rect x="385" y="530" width="30" height="8" rx="4" fill="url(#metalGrad)" stroke="#7c3aed" stroke-width="0.5" />
+    <circle cx="395" cy="534" r="2" fill="#a855f7" filter="url(#glowFilter)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="410" cy="534" r="2" fill="#a855f7" filter="url(#glowFilter)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- HEAD -->
+    <g>
+      <!-- Head shape -->
+      <ellipse cx="400" cy="380" rx="130" ry="155" fill="url(#skinGrad)" />
+
+      <!-- Right side cyborg panel (covering right cheek/temple) -->
+      <path d="M 460 310 Q 510 320 520 380 Q 525 430 490 460 L 470 440 Q 495 410 490 370 Q 488 330 460 310 Z"
+            fill="url(#metalGrad)" stroke="#5a5a8c" stroke-width="1" />
+
+      <!-- Cyber panel detail lines -->
+      <g filter="url(#glowFilter)" opacity="0.8">
+        <line x1="475" y1="325" x2="505" y2="345" stroke="#22d3ee" stroke-width="1" />
+        <line x1="480" y1="340" x2="510" y2="360" stroke="#22d3ee" stroke-width="1" />
+        <line x1="485" y1="355" x2="515" y2="375" stroke="#22d3ee" stroke-width="1" />
+        <circle cx="508" cy="348" r="2" fill="#22d3ee" />
+        <circle cx="518" cy="378" r="2" fill="#22d3ee" />
+      </g>
+
+      <!-- Small screws on panel -->
+      <circle cx="468" cy="315" r="3" fill="#3a3a5c" stroke="#5a5a8c" stroke-width="1" />
+      <circle cx="498" cy="445" r="3" fill="#3a3a5c" stroke="#5a5a8c" stroke-width="1" />
+
+      <!-- EARS -->
+      <!-- Left ear (human) -->
+      <ellipse cx="272" cy="385" rx="18" ry="28" fill="url(#skinGrad)" />
+      <ellipse cx="275" cy="385" rx="10" ry="18" fill="#a0692b" opacity="0.4" />
+
+      <!-- Right ear (cyborg earpiece) -->
+      <ellipse cx="528" cy="385" rx="22" ry="30" fill="url(#earPieceGrad)" stroke="#5a5a8c" stroke-width="1" />
+      <ellipse cx="528" cy="385" rx="12" ry="18" fill="#2a2a4c" />
+      <circle cx="528" cy="385" r="6" fill="#22d3ee" filter="url(#glowFilter)">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- HAIR (medium, slightly messy/styled) -->
+      <g>
+        <!-- Main hair volume -->
+        <path d="M 275 320 Q 270 240 310 200 Q 350 165 400 158 Q 450 165 490 200 Q 525 235 525 310
+                 Q 520 280 490 260 Q 450 240 400 235 Q 350 240 315 260 Q 285 280 275 320 Z"
+              fill="url(#hairGrad)" />
+
+        <!-- Hair top volume -->
+        <path d="M 300 220 Q 320 170 380 155 Q 420 148 460 160 Q 500 175 510 220
+                 Q 490 190 440 175 Q 390 168 350 178 Q 315 190 300 220 Z"
+              fill="#222240" />
+
+        <!-- Hair strands -->
+        <path d="M 310 210 Q 325 185 360 172" fill="none" stroke="#2a2a45" stroke-width="2" />
+        <path d="M 340 195 Q 370 170 410 165" fill="none" stroke="#2a2a45" stroke-width="2" />
+        <path d="M 430 168 Q 470 178 495 205" fill="none" stroke="#2a2a45" stroke-width="2" />
+
+        <!-- Side hair -->
+        <path d="M 275 320 Q 268 290 275 260 Q 280 245 295 230"
+              fill="none" stroke="url(#hairGrad)" stroke-width="15" stroke-linecap="round" />
+        <path d="M 525 310 Q 530 285 520 260 Q 515 245 505 230"
+              fill="none" stroke="url(#hairGrad)" stroke-width="12" stroke-linecap="round" />
+
+        <!-- Cyber streak in hair -->
+        <path d="M 450 170 Q 470 185 480 220 Q 488 250 490 280"
+              fill="none" stroke="#7c3aed" stroke-width="3" opacity="0.6" filter="url(#glowFilter)" />
+      </g>
+
+      <!-- EYEBROWS -->
+      <path d="M 315 320 Q 340 305 370 312" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" />
+      <path d="M 430 312 Q 460 305 485 320" fill="none" stroke="#1a1a2e" stroke-width="4" stroke-linecap="round" />
+
+      <!-- EYES -->
+      <!-- Left eye (human) -->
+      <g>
+        <ellipse cx="345" cy="370" rx="28" ry="22" fill="white" />
+        <ellipse cx="350" cy="372" rx="14" ry="16" fill="#2d1b00" />
+        <ellipse cx="350" cy="372" rx="9" ry="10" fill="#1a1005" />
+        <circle cx="344" cy="365" r="4" fill="white" opacity="0.8" />
+        <circle cx="356" cy="375" r="2" fill="white" opacity="0.5" />
+        <!-- Eyelid line -->
+        <path d="M 318 358 Q 345 345 375 358" fill="none" stroke="#5a3a1a" stroke-width="2" />
+      </g>
+
+      <!-- Right eye (cyborg) -->
+      <g>
+        <ellipse cx="455" cy="370" rx="28" ry="22" fill="#0a0a20" stroke="#22d3ee" stroke-width="1.5" />
+        <circle cx="455" cy="370" r="14" fill="url(#cyberEyeGlow)" filter="url(#strongGlow)">
+          <animate attributeName="r" values="14;15;14" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="455" cy="370" r="6" fill="#0a0a20" />
+        <circle cx="455" cy="370" r="3" fill="#22d3ee">
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="1s" repeatCount="indefinite" />
+        </circle>
+        <!-- Scan lines -->
+        <line x1="440" y1="370" x2="428" y2="370" stroke="#22d3ee" stroke-width="0.8" opacity="0.5" />
+        <line x1="470" y1="370" x2="482" y2="370" stroke="#22d3ee" stroke-width="0.8" opacity="0.5" />
+        <line x1="455" y1="356" x2="455" y2="349" stroke="#22d3ee" stroke-width="0.8" opacity="0.5" />
+        <line x1="455" y1="384" x2="455" y2="391" stroke="#22d3ee" stroke-width="0.8" opacity="0.5" />
+
+        <!-- HUD elements around cyber eye -->
+        <rect x="478" y="355" width="15" height="8" rx="2" fill="none" stroke="#22d3ee" stroke-width="0.7" opacity="0.4" />
+        <text x="480" y="362" font-size="6" fill="#22d3ee" opacity="0.5" font-family="monospace">OK</text>
+      </g>
+
+      <!-- NOSE -->
+      <path d="M 398 395 Q 390 420 385 430 Q 395 435 405 435 Q 415 435 415 430 Q 410 420 402 395"
+            fill="none" stroke="#8d5524" stroke-width="1.5" opacity="0.6" />
+
+      <!-- MOUTH (slight confident smile) -->
+      <path d="M 365 465 Q 380 478 400 480 Q 420 478 435 465"
+            fill="none" stroke="#6b3a1a" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- Chin cyber marking -->
+      <g filter="url(#glowFilter)" opacity="0.5">
+        <line x1="400" y1="495" x2="400" y2="510" stroke="#7c3aed" stroke-width="1.5" />
+        <line x1="390" y1="505" x2="410" y2="505" stroke="#7c3aed" stroke-width="1" />
+      </g>
+
+      <!-- Temple circuit (left side) -->
+      <g filter="url(#glowFilter)" opacity="0.5">
+        <path d="M 290 340 L 290 310 L 305 300" fill="none" stroke="#a855f7" stroke-width="1.5" />
+        <circle cx="290" cy="340" r="2.5" fill="#a855f7" />
+        <circle cx="305" cy="300" r="2" fill="#a855f7" />
+      </g>
+    </g>
+
+    <!-- Shoulder circuit accents -->
+    <g filter="url(#glowFilter)" opacity="0.5">
+      <!-- Left shoulder -->
+      <path d="M 290 590 L 290 610 L 310 610" fill="none" stroke="#7c3aed" stroke-width="2" />
+      <circle cx="310" cy="610" r="3" fill="#a855f7" />
+
+      <!-- Right shoulder -->
+      <path d="M 510 590 L 510 610 L 490 610" fill="none" stroke="#22d3ee" stroke-width="2" />
+      <circle cx="490" cy="610" r="3" fill="#22d3ee" />
+    </g>
+
+  </g>
+
+  <!-- Ambient glow behind character -->
+  <ellipse cx="400" cy="500" rx="200" ry="300" fill="#7c3aed" opacity="0.04" />
+
+  <!-- Bottom fade -->
+  <rect x="0" y="800" width="800" height="100" fill="url(#bgGlow)" opacity="0.8" />
+
+</svg>

@@ -1,0 +1,22 @@
+{
+  "app/page.tsx -> @/components/three/StarField": {
+    "id": "app/page.tsx -> @/components/three/StarField",
+    "files": [
+      "static/chunks/_app-pages-browser_components_three_StarField_tsx.js"
+    ]
+  },
+  "components/About.tsx -> ./three/GlobeScene": {
+    "id": "components/About.tsx -> ./three/GlobeScene",
+    "files": [
+      "static/chunks/_app-pages-browser_components_three_GlobeScene_tsx.js"
+    ]
+  },
+  "node_modules/@react-three/drei/core/VideoTexture.js -> hls.js": {
+    "id": "node_modules/@react-three/drei/core/VideoTexture.js -> hls.js",
+    "files": []
+  },
+  "node_modules/@react-three/drei/web/FaceLandmarker.js -> @mediapipe/tasks-vision": {
+    "id": "node_modules/@react-three/drei/web/FaceLandmarker.js -> @mediapipe/tasks-vision",
+    "files": []
+  }
+}
